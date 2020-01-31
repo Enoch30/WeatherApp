@@ -1,5 +1,7 @@
 <div class="content container" role="main">
 
+  <h2>Weather App</h2>
+
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
   </mat-form-field>
@@ -29,7 +31,6 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;">
       </tr>
     </table>
-
     <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
   </div>
 
