@@ -35,6 +35,8 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
+  //*Basic tests*
+
   it(`input should work`, () => {
       const fixture = TestBed.createComponent(AppComponent);
       const imputField = fixture.nativeElement.querySelector('input');
