@@ -26,10 +26,11 @@ export class AppComponent implements OnInit {
     this.titleService.setTitle('WeatherApp');
   }
 
+
+  //Bar chart config
   temperatures: number[] = [];
   cityNames: Label[] = [];
   tempSum:number = 0;
-
   barChartOptions: ChartOptions = {
     responsive: true,
   };
@@ -42,9 +43,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
   this.dataSource = new MatTableDataSource();
+    //get data from open weather
     this.dataService.getCities()
       .subscribe(data => {
-
         this.dataSource =  new MatTableDataSource(data['list']);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
@@ -62,6 +63,7 @@ export class AppComponent implements OnInit {
       })
   }
 
+  //filter rows
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
     if (this.dataSource.paginator) {

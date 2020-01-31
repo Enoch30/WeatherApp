@@ -31,9 +31,11 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;">
       </tr>
     </table>
+    <!--Paginator-->
     <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
   </div>
 
+  <!--Bar chart-->
   <div class="chart-wrapper graph">
     <canvas baseChart
     [datasets]="barChartData"
