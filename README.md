@@ -1,5 +1,11 @@
 # WeatherApp
 
+Simple weather tracking application developed with Angular and Openweather API.
+
+## Demo
+
+<img src="img/screenshot.PNG" height=400>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
 ## Development server
